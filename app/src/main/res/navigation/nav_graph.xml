@@ -28,5 +28,9 @@
         android:id="@+id/signOutFragment"
         android:name="com.example.nfc_hack.SignOutFragment"
         android:label="fragment_sign_out"
-        tools:layout="@layout/fragment_sign_out" />
+        tools:layout="@layout/fragment_sign_out" >
+        <action
+            android:id="@+id/action_signOutFragment_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
 </navigation>
