@@ -119,10 +119,5 @@ class ScanFragment : Fragment() {
 
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        Input.id="null"
-    }
-
 
 }

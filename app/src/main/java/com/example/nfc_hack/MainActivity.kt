@@ -98,4 +98,9 @@ class MainActivity : AppCompatActivity() {
         var bundle = bundleOf("code" to PassSub.subcode[7],"name" to PassSub.subname[7],"date" to PassSub.subdate[7],"time" to PassSub.subtime[7])
         findNavController(R.id.nav_host_fragment).navigate(R.id.action_scanFragment_to_subjectFragment,bundle)
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Input.id="null"
+    }
 }
