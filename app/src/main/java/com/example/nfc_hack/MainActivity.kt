@@ -1,10 +1,14 @@
 package com.example.nfc_hack
 
+import android.nfc.NdefMessage
+import android.nfc.NfcAdapter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
@@ -15,6 +19,19 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        var message:String = ""
+        if(intent.action == "android.nfc.action.NDEF_DISCOVERED") {
+            Toast.makeText(this, "NFC Tag Scanned", Toast.LENGTH_LONG).show()
+            intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)?.also { rawMessages ->
+                val messages: List<NdefMessage> = rawMessages.map { it as NdefMessage }
+                // Process the messages array.
+                message = String((messages.get(0).records[0].payload)).drop(3)
+            }
+            val id = message
+            Input.id  = id
+            println(id)
+          //findNavController(R.id.nav_host_fragment).navigate(R.id.action_signOutFragment_to_scanFragment, bundle)
+        }
         var navController:NavController  = Navigation.findNavController(this,R.id.nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this,navController)
     }
