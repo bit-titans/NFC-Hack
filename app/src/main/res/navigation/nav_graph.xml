@@ -9,7 +9,11 @@
         android:id="@+id/scanFragment"
         android:name="com.example.nfc_hack.ScanFragment"
         android:label="NFC Hall Ticket"
-        tools:layout="@layout/fragment_scan" />
+        tools:layout="@layout/fragment_scan" >
+        <action
+            android:id="@+id/action_scanFragment_to_signOutFragment"
+            app:destination="@id/signOutFragment" />
+    </fragment>
     <fragment
         android:id="@+id/subjectFragment"
         android:name="com.example.nfc_hack.SubjectFragment"

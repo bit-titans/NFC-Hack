@@ -13,6 +13,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.firebase.ui.auth.AuthUI
 
 class MainActivity : AppCompatActivity() {
 
@@ -50,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         // Handle item selection
         return when (item.itemId) {
             R.id.logout -> {
-                println("You clicked logout")
+                AuthUI.getInstance().signOut(this).addOnCompleteListener { findNavController(R.id.nav_host_fragment).navigate(R.id.action_scanFragment_to_signOutFragment) }
                 true
             }
             else -> super.onOptionsItemSelected(item)
