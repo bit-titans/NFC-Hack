@@ -92,11 +92,8 @@ class ScanFragment : Fragment() {
                             Sub5.visibility = View.VISIBLE
                             Sub6.visibility = View.VISIBLE
                             Sub7.visibility = View.VISIBLE
-                            Sub8.visibility = View.VISIBLE
+
                             Sub1.setText(subs[0])
-                            for(sub in subs) {
-                                println(sub)
-                            }
                             Sub1.setText(subs[0])
                             Sub2.setText(subs[1])
                             Sub3.setText(subs[2])
@@ -104,7 +101,10 @@ class ScanFragment : Fragment() {
                             Sub5.setText(subs[4])
                             Sub6.setText(subs[5])
                             Sub7.setText(subs[6])
-                            Sub8.setText(subs[7])
+                            if( p0.child("Subjects").children.count() == 8){
+                                Sub8.visibility = View.VISIBLE
+                                Sub8.setText(subs[7])
+                            }
                             PassSub.subcode = subs
                             PassSub.subdate = subs_date
                             PassSub.subname = subs_name
