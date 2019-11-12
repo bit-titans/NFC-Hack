@@ -1,14 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScanFragment">
+    tools:context=".SubjectFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="183dp"
+            android:layout_height="183dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please Place The Device On Card"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.082" />
+
+        <TextView
+            android:id="@+id/subjectsApplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SubjectsApplied"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textview"
+            app:layout_constraintVertical_bias="0.126" />
+
+        <TextView
+            android:id="@+id/Sub1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub1"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.629" />
+
+        <TextView
+            android:id="@+id/Sub2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub2"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub1"
+            app:layout_constraintHorizontal_bias="0.141"
+            app:layout_constraintStart_toStartOf="@+id/Sub1"
+            app:layout_constraintTop_toBottomOf="@+id/Sub1"
+            app:layout_constraintVertical_bias="0.212" />
+
+        <TextView
+            android:id="@+id/Sub3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub3"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub2"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toStartOf="@+id/Sub2"
+            app:layout_constraintTop_toBottomOf="@+id/Sub2"
+            app:layout_constraintVertical_bias="0.281" />
+
+        <TextView
+            android:id="@+id/Sub4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub4"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub3"
+            app:layout_constraintStart_toStartOf="@+id/Sub3"
+            app:layout_constraintTop_toBottomOf="@+id/Sub3" />
+
+        <TextView
+            android:id="@+id/Sub5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub5"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.849"
+            app:layout_constraintStart_toEndOf="@+id/Sub1"
+            app:layout_constraintTop_toBottomOf="@+id/subjectsApplied"
+            app:layout_constraintVertical_bias="0.113" />
+
+        <TextView
+            android:id="@+id/Sub6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub6"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub5"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Sub5"
+            app:layout_constraintTop_toBottomOf="@+id/Sub5"
+            app:layout_constraintVertical_bias="0.211" />
+
+        <TextView
+            android:id="@+id/Sub7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub7"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Sub6"
+            app:layout_constraintTop_toBottomOf="@+id/Sub6"
+            app:layout_constraintVertical_bias="0.285" />
+
+        <TextView
+            android:id="@+id/Sub8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub8"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/Sub7"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/Sub7"
+            app:layout_constraintTop_toBottomOf="@+id/Sub7"
+            app:layout_constraintVertical_bias="0.493" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
