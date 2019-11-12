@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "735757069444",
+    "firebase_url": "https://nfc-hack-198c6.firebaseio.com",
+    "project_id": "nfc-hack-198c6",
+    "storage_bucket": "nfc-hack-198c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735757069444:android:67acb206181627c16966d1",
+        "android_client_info": {
+          "package_name": "com.example.nfc_hack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "735757069444-uek3gf7infq7kv0vkqkdguvpfmbkp2de.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nfc_hack",
+            "certificate_hash": "27fb5b8ad0c02ab7f50e8dd3642543c2d3c7b574"
+          }
+        },
+        {
+          "client_id": "735757069444-u5ub7et2m8c47fmijs6u4r7u18m4p1tv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_qbjfMhwYZAAntsnSbbJBkDHajxZavkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "735757069444-u5ub7et2m8c47fmijs6u4r7u18m4p1tv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

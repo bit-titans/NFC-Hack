@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scanFragment">
+
+    <fragment
+        android:id="@+id/scanFragment"
+        android:name="com.example.nfc_hack.ScanFragment"
+        android:label="fragment_scan"
+        tools:layout="@layout/fragment_scan" />
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.example.nfc_hack.SubjectFragment"
+        android:label="fragment_subject"
+        tools:layout="@layout/fragment_subject" />
+    <fragment
+        android:id="@+id/noConnection"
+        android:name="com.example.nfc_hack.NoConnection"
+        android:label="fragment_no_connection"
+        tools:layout="@layout/fragment_no_connection" />
+    <fragment
+        android:id="@+id/signOutFragment"
+        android:name="com.example.nfc_hack.SignOutFragment"
+        android:label="fragment_sign_out"
+        tools:layout="@layout/fragment_sign_out" />
+</navigation>
