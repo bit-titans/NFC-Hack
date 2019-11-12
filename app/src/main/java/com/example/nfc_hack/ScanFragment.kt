@@ -69,7 +69,7 @@ class ScanFragment : Fragment() {
                     var storage = FirebaseStorage.getInstance()
                     if(name!=null) {
                         val storageReference =
-                            FirebaseStorage.getInstance().reference.child(usn as String + ".jpeg")
+                            FirebaseStorage.getInstance().reference.child(usn as String + ".jpg")
                         val imageView = view.findViewById<ImageView>(R.id.imageView)
                         if (id != "none") {
                             GlideApp.with(view /* context */)
