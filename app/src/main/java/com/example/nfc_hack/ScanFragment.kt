@@ -57,6 +57,7 @@ class ScanFragment : Fragment() {
         }
         else{
             id = Input.id
+            println(id)
             database = FirebaseDatabase.getInstance().reference.child("data").child(id)
             database.addValueEventListener(object : ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {
@@ -82,7 +83,7 @@ class ScanFragment : Fragment() {
                                 subs[i] = sub.child("code").value as String
                                 subs_name[i] = sub.child("name").value as String
                                 subs_date[i] = sub.child("date").value as String
-                                subs_time[i] = sub.child("time").value as String
+                                subs_time[i++] = sub.child("time").value as String
                             }
                             subjectsApplied.visibility = View.VISIBLE
                             Sub1.visibility = View.VISIBLE
@@ -94,13 +95,17 @@ class ScanFragment : Fragment() {
                             Sub7.visibility = View.VISIBLE
                             Sub8.visibility = View.VISIBLE
                             Sub1.setText(subs[0])
-                            Sub1.setText(subs[1])
-                            Sub1.setText(subs[2])
-                            Sub1.setText(subs[3])
-                            Sub1.setText(subs[4])
-                            Sub1.setText(subs[5])
-                            Sub1.setText(subs[6])
-                            Sub1.setText(subs[7])
+                            for(sub in subs) {
+                                println(sub)
+                            }
+                            Sub1.setText(subs[0])
+                            Sub2.setText(subs[1])
+                            Sub3.setText(subs[2])
+                            Sub4.setText(subs[3])
+                            Sub5.setText(subs[4])
+                            Sub6.setText(subs[5])
+                            Sub7.setText(subs[6])
+                            Sub8.setText(subs[7])
                             PassSub.subcode = subs
                             PassSub.subdate = subs_date
                             PassSub.subname = subs_name

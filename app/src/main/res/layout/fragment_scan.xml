@@ -39,21 +39,22 @@
             android:id="@+id/subjectsApplied"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SubjectsApplied"
+            android:text="Subjects Applied"
             android:textSize="24sp"
             android:textStyle="bold"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textview"
-            app:layout_constraintVertical_bias="0.126" />
+            app:layout_constraintVertical_bias="0.088" />
 
         <TextView
             android:id="@+id/Sub1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick1"
             android:text="Sub1"
             android:textSize="24sp"
             android:visibility="invisible"
@@ -62,7 +63,7 @@
             app:layout_constraintHorizontal_bias="0.14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.629" />
+            app:layout_constraintVertical_bias="0.658" />
 
         <TextView
             android:id="@+id/Sub2"
@@ -76,7 +77,8 @@
             app:layout_constraintHorizontal_bias="0.141"
             app:layout_constraintStart_toStartOf="@+id/Sub1"
             app:layout_constraintTop_toBottomOf="@+id/Sub1"
-            app:layout_constraintVertical_bias="0.212" />
+            app:layout_constraintVertical_bias="0.212"
+            android:onClick="onClick2" />
 
         <TextView
             android:id="@+id/Sub3"
@@ -90,7 +92,8 @@
             app:layout_constraintHorizontal_bias="0.13"
             app:layout_constraintStart_toStartOf="@+id/Sub2"
             app:layout_constraintTop_toBottomOf="@+id/Sub2"
-            app:layout_constraintVertical_bias="0.281" />
+            app:layout_constraintVertical_bias="0.281"
+            android:onClick="onClick3" />
 
         <TextView
             android:id="@+id/Sub4"
@@ -102,62 +105,63 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/Sub3"
             app:layout_constraintStart_toStartOf="@+id/Sub3"
-            app:layout_constraintTop_toBottomOf="@+id/Sub3" />
+            app:layout_constraintTop_toBottomOf="@+id/Sub3"
+            android:onClick="onClick4" />
 
         <TextView
             android:id="@+id/Sub5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick5"
             android:text="Sub5"
             android:textSize="24sp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/Sub1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.849"
             app:layout_constraintStart_toEndOf="@+id/Sub1"
-            app:layout_constraintTop_toBottomOf="@+id/subjectsApplied"
-            app:layout_constraintVertical_bias="0.113" />
+            app:layout_constraintTop_toTopOf="@+id/Sub1" />
 
         <TextView
             android:id="@+id/Sub6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick6"
             android:text="Sub6"
             android:textSize="24sp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/Sub2"
             app:layout_constraintEnd_toEndOf="@+id/Sub5"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/Sub5"
-            app:layout_constraintTop_toBottomOf="@+id/Sub5"
-            app:layout_constraintVertical_bias="0.211" />
+            app:layout_constraintTop_toTopOf="@+id/Sub2" />
 
         <TextView
             android:id="@+id/Sub7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick7"
             android:text="Sub7"
             android:textSize="24sp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/Sub3"
             app:layout_constraintEnd_toEndOf="@+id/Sub6"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/Sub6"
-            app:layout_constraintTop_toBottomOf="@+id/Sub6"
-            app:layout_constraintVertical_bias="0.285" />
+            app:layout_constraintTop_toTopOf="@+id/Sub3" />
 
         <TextView
             android:id="@+id/Sub8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onClick8"
             android:text="Sub8"
             android:textSize="24sp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/Sub4"
             app:layout_constraintEnd_toEndOf="@+id/Sub7"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/Sub7"
-            app:layout_constraintTop_toBottomOf="@+id/Sub7"
-            app:layout_constraintVertical_bias="0.493" />
+            app:layout_constraintTop_toTopOf="@+id/Sub4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
