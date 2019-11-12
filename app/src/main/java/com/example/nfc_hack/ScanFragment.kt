@@ -57,7 +57,6 @@ class ScanFragment : Fragment() {
         }
         else{
             id = Input.id
-            println(id)
             database = FirebaseDatabase.getInstance().reference.child("data").child(id)
             database.addValueEventListener(object : ValueEventListener{
                 override fun onCancelled(p0: DatabaseError) {
@@ -67,7 +66,7 @@ class ScanFragment : Fragment() {
                     var name =  p0.child("name").value
                     var usn = p0.child("usn").value
                     var storage = FirebaseStorage.getInstance()
-                    if(name!=null) {
+                    if(id!="null") {
                         val storageReference =
                             FirebaseStorage.getInstance().reference.child(usn as String + ".jpg")
                         val imageView = view.findViewById<ImageView>(R.id.imageView)
@@ -118,6 +117,11 @@ class ScanFragment : Fragment() {
             })
         }
 
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        Input.id="null"
     }
 
 
