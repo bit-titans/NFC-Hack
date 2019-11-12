@@ -23,9 +23,9 @@ class ScanFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private lateinit var database: DatabaseReference
     private var subs = arrayOfNulls<String>(8)
-    private var sub_name = arrayOfNulls<String>(8)
-    private var sub_date = arrayOfNulls<String>(8)
-    private var sub_time = arrayOfNulls<String>(8)
+    private var subs_name = arrayOfNulls<String>(8)
+    private var subs_date = arrayOfNulls<String>(8)
+    private var subs_time = arrayOfNulls<String>(8)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -75,6 +75,36 @@ class ScanFragment : Fragment() {
                                 .load(storageReference)
                                 .into(imageView)
                             textview.setText("Name:$name \nUSN:$usn")
+
+                            var i = 0
+                            for (sub in p0.child("Subjects").children)
+                            {
+                                subs[i] = sub.child("code").value as String
+                                subs_name[i] = sub.child("name").value as String
+                                subs_date[i] = sub.child("date").value as String
+                                subs_time[i] = sub.child("time").value as String
+                            }
+                            subjectsApplied.visibility = View.VISIBLE
+                            Sub1.visibility = View.VISIBLE
+                            Sub2.visibility = View.VISIBLE
+                            Sub3.visibility = View.VISIBLE
+                            Sub4.visibility = View.VISIBLE
+                            Sub5.visibility = View.VISIBLE
+                            Sub6.visibility = View.VISIBLE
+                            Sub7.visibility = View.VISIBLE
+                            Sub8.visibility = View.VISIBLE
+                            Sub1.setText(subs[0])
+                            Sub1.setText(subs[1])
+                            Sub1.setText(subs[2])
+                            Sub1.setText(subs[3])
+                            Sub1.setText(subs[4])
+                            Sub1.setText(subs[5])
+                            Sub1.setText(subs[6])
+                            Sub1.setText(subs[7])
+                            PassSub.subcode = subs
+                            PassSub.subdate = subs_date
+                            PassSub.subname = subs_name
+                            PassSub.subtime = subs_time
                         }
                     }
 
