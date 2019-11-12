@@ -17,13 +17,13 @@
     <fragment
         android:id="@+id/subjectFragment"
         android:name="com.example.nfc_hack.SubjectFragment"
-        android:label="fragment_subject"
+        android:label="NFC Hall Ticket"
         tools:layout="@layout/fragment_subject" />
     <fragment
         android:id="@+id/noConnection"
         android:name="com.example.nfc_hack.NoConnection"
-        android:label="fragment_no_connection"
-        tools:layout="@layout/fragment_no_connection" >
+        android:label="NFC Hall Ticket"
+        tools:layout="@layout/fragment_no_connection">
         <action
             android:id="@+id/action_noConnection_to_scanFragment"
             app:destination="@id/scanFragment" />
@@ -31,8 +31,8 @@
     <fragment
         android:id="@+id/signOutFragment"
         android:name="com.example.nfc_hack.SignOutFragment"
-        android:label="fragment_sign_out"
-        tools:layout="@layout/fragment_sign_out" >
+        android:label="NFC Hall Ticket"
+        tools:layout="@layout/fragment_sign_out">
         <action
             android:id="@+id/action_signOutFragment_to_scanFragment"
             app:destination="@id/scanFragment" />

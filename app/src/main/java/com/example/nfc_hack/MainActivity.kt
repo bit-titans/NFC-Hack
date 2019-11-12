@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity() {
             }
             val id = message
             Input.id  = id
-            println(id)
-          //findNavController(R.id.nav_host_fragment).navigate(R.id.action_signOutFragment_to_scanFragment, bundle)
         }
         var navController:NavController  = Navigation.findNavController(this,R.id.nav_host_fragment)
         NavigationUI.setupActionBarWithNavController(this,navController)
