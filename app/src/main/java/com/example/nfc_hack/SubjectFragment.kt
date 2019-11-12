@@ -33,7 +33,7 @@ class SubjectFragment : Fragment() {
         subCode.setText(subcode)
         subName.setText(subname)
         subDate.setText(subdate)
-        subTime.setText(subtime)
+        subTime.setText(subtime?.trim())
         var calendar: Calendar = Calendar.getInstance()
         var paths = subdate!!.split("-")
         calendar.set(Calendar.DAY_OF_MONTH,Integer.parseInt(paths[0]))

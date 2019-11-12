@@ -16,24 +16,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="subCode"
-            android:textSize="24sp"
+            android:textSize="32sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.115" />
+            app:layout_constraintVertical_bias="0.115"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
 
         <TextView
             android:id="@+id/subDate"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="308dp"
+            android:layout_height="24dp"
             android:text="subDate"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.049"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.334" />
+            app:layout_constraintVertical_bias="0.336"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/subName"
@@ -46,7 +50,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/subDate"
             app:layout_constraintTop_toBottomOf="@+id/subDate"
-            app:layout_constraintVertical_bias="0.217" />
+            app:layout_constraintVertical_bias="0.084"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/subTime"
@@ -56,9 +61,11 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/subName"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/subName"
             app:layout_constraintTop_toBottomOf="@+id/subName"
-            app:layout_constraintVertical_bias="0.367" />
+            app:layout_constraintVertical_bias="0.108"
+            android:textColor="@color/white"/>
 
         <Button
             android:id="@+id/button"
@@ -74,7 +81,8 @@
             app:layout_constraintHorizontal_bias="0.478"
             app:layout_constraintStart_toStartOf="@+id/subCode"
             app:layout_constraintTop_toBottomOf="@+id/subCode"
-            app:layout_constraintVertical_bias="0.871" />
+            app:layout_constraintVertical_bias="0.871"
+            android:textColor="@color/white"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
