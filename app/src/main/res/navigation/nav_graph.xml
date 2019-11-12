@@ -19,7 +19,11 @@
         android:id="@+id/noConnection"
         android:name="com.example.nfc_hack.NoConnection"
         android:label="fragment_no_connection"
-        tools:layout="@layout/fragment_no_connection" />
+        tools:layout="@layout/fragment_no_connection" >
+        <action
+            android:id="@+id/action_noConnection_to_scanFragment"
+            app:destination="@id/scanFragment" />
+    </fragment>
     <fragment
         android:id="@+id/signOutFragment"
         android:name="com.example.nfc_hack.SignOutFragment"
